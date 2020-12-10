@@ -13,8 +13,8 @@
 var flakes = [];
 var snowCanvas = document.getElementById("snowCanvas");
 var ctx = snowCanvas.getContext("2d");
-var flakeCount = 750;
-var offset = 5;
+var flakeCount = 1400;
+var offset = 2;
 snowCanvas.width = window.innerWidth;
 snowCanvas.height = window.innerHeight;
 
@@ -42,10 +42,10 @@ function init() {
     snow();
 }
 
-function getNewFlakeSize() { return Math.random() * 3 + 1; }
+function getNewFlakeSize() { return Math.random() * 3 + 2; }
 function getNewFlakeSpeed() { return Math.random() * 0.5 + 1; }
-function getNewFlakeOpacity() { return Math.random() * 0.4 + 0.1; }
-function getNewFlakeVelX() { return Math.random() * 0.6 - 0.3; }
+function getNewFlakeOpacity() { return Math.random() * 0.6 + 0.1; }
+function getNewFlakeVelX() { return Math.random() - 0.9; }
 
 function snow() {
     ctx.clearRect(0, 0, snowCanvas.width, snowCanvas.height);
